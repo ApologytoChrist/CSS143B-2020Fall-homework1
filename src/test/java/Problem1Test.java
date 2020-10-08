@@ -32,4 +32,12 @@ public class Problem1Test {
             assertEquals(expected, actual);
         }
     }
+    @Test
+    public void secondTest() {
+        int[] input = null;
+        int target = 0;
+        int answer = -1;
+        int actual = Problem1.binarySearch(input, target);
+        assertEquals(answer, actual);
+    }
 }
