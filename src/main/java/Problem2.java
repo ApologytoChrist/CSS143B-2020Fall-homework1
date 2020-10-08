@@ -6,7 +6,7 @@ public class Problem2 {
     // Do not change signature (function name, parameters)
     public static void bubbleSort(int[] data) {
         // Add your solution
-        if (data.length >= 2) {
+        if (data != null && data.length >= 2) {
             int lhs, rhs;
 
                 lhs = data[index - 1];

@@ -10,6 +10,7 @@ public class Problem2Test {
     public void testBubbleSort() {
         // add your tests here
         int[][] inputs = {
+                {},
                 {3},
                 {1, 2, 3},
                 {4, 9 , 0, 3, 6},
@@ -17,11 +18,12 @@ public class Problem2Test {
                 {-10, -6, -18, -10}
         };
         int[][] answers = {
+                {},
                 {3},
                 {1, 2, 3},
                 {0, 3, 4, 6, 9},
                 {-1, 7, 8, 12},
-                {-6, -10, -10, -18}
+                {-18, -10, -10, -6}
         };
 
         assertEquals(inputs.length, answers.length);
@@ -33,12 +35,9 @@ public class Problem2Test {
     }
 
     @Test
-    public void secondTest() {
-        int[] input = {4,9,0, 3,6};
-        int[] answer = {0,3,4,6,9};
-
+    public void nullTest() {
+        int[] input = null;
+        //As long as it doesn't crash it's ok
         Problem2.bubbleSort(input);
-
-        assertArrayEquals(answer, input);
     }
 }
