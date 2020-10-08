@@ -27,14 +27,18 @@ public class Problem2Test {
         assertEquals(inputs.length, answers.length);
 
         for (int i = 0; i < inputs.length; i++) {
-            for (int j = 0; j < inputs[i].length; j++) {
-                int expected = answers[i][j];
-                Problem2.bubbleSort(inputs[i]);
-                int actual = inputs[i][j];
-
-                assertEquals(expected, actual);
-            }
-
+            Problem2.bubbleSort(inputs[i]);
+            assertArrayEquals(answers[i], inputs[i]);
         }
+    }
+
+    @Test
+    public void secondTest() {
+        int[] input = {4,9,0, 3,6};
+        int[] answer = {0,3,4,6,9};
+
+        Problem2.bubbleSort(input);
+
+        assertArrayEquals(answer, input);
     }
 }
