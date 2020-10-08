@@ -18,10 +18,13 @@ public class Problem2 {
                     swap++;
                 }
 
+                //if completely set, also index needs to be reset b/c instance variable
                 if (index == data.length - 1 && swap == 0) {
                     index = 1;
                     return;
-                } else if(index == data.length - 1) {
+                }
+                //if reached end and not fully set
+                else if(index == data.length - 1) {
                     index = 1;
                     swap = 0;
                     bubbleSort(data);
